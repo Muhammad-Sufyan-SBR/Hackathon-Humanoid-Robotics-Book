@@ -67,7 +67,7 @@ const config = {
             className: 'button button--primary margin-right--sm signin-btn', // Custom class for styling
           },
           {
-            href: 'https://github.com/your-org/your-project',
+            href: 'https://github.com/Muhammad-Sufyan-SBR/Hackathon-Humanoid-Robotics-Book',
             label: 'GitHub',
             position: 'right',
           },
@@ -84,8 +84,8 @@ const config = {
                 to: '/docs/intro',
               },
               {
-                label: 'Chapter 1',
-                to: '/docs/chapter1',
+                label: 'Module 1',
+                to: '/docs/module1',
               },
             ],
           },
