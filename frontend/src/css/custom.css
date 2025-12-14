@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --ifm-color-primary: #8a2be2;
+  --ifm-color-primary-dark: #7209b7;
+  --ifm-color-primary-darker: #560bad;
+  --ifm-color-primary-darkest: #480ca8;
+  --ifm-color-primary-light: #b5179e;
+  --ifm-color-primary-lighter: #f72585;
+  --ifm-color-primary-lightest: #ff4cc2;
+
+  --ifm-font-family-base: 'Rajdhani', 'Segoe UI', sans-serif;
+  --ifm-heading-font-family: 'Orbitron', 'Segoe UI', sans-serif;
+
+  --ifm-background-color: #0A0F1F;
+  --ifm-background-surface-color: #111625;
+  
+  --neon-purple: #b5179e;
+  --neon-blue: #4cc9f0;
+  --glass-bg: rgba(17, 22, 37, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --neon-glow: 0 0 10px rgba(181, 23, 158, 0.7), 0 0 20px rgba(76, 201, 240, 0.5);
+}
+
+[data-theme='dark'] {
+  --ifm-background-color: #0A0F1F;
+  --ifm-navbar-background-color: rgba(10, 15, 31, 0.8);
+  --ifm-footer-background-color: #050810;
+  --ifm-font-color-base: #e0e6ed;
+}
+
+/* Global Background */
+body {
+  background: radial-gradient(circle at 50% 0%, #1a2238 0%, #0A0F1F 70%);
+  background-attachment: fixed;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  /* Default Fallback */
+  color: #ffffff; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* Neon Headings for Modules */
+.markdown h1 {
+  color: #f72585; /* Neon Pink */
+  text-shadow: 0 0 10px rgba(247, 37, 133, 0.5);
+  border-bottom: 1px solid rgba(247, 37, 133, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.markdown h2 {
+  color: #4cc9f0; /* Neon Cyan */
+  text-shadow: 0 0 8px rgba(76, 201, 240, 0.4);
+  margin-top: 2rem;
+}
+
+.markdown h3 {
+  color: #b5179e; /* Neon Purple */
+  text-shadow: 0 0 5px rgba(181, 23, 158, 0.3);
+}
+
+.markdown h4, .markdown h5, .markdown h6 {
+  color: #ffffff; /* Keep lower levels white/light for readability */
+}
+
+
+/* Navbar */
+.navbar {
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.navbar__brand {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+/* Make Logo Bigger */
+.navbar__logo {
+  height: 50px; /* Increased from default ~32px */
+  margin-right: 15px;
+  filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5)); /* Add glow to the logo image itself */
+  transition: transform 0.3s ease;
+}
+
+.navbar__logo:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.navbar__title {
+  background: linear-gradient(90deg, #4cc9f0, #f72585);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.3rem; /* Slightly larger title to match logo */
+}
+
+/* Custom Button Classes */
+.button--primary {
+  background: rgba(76, 201, 240, 0.1);
+  border: 1px solid var(--neon-blue);
+  color: var(--neon-blue);
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.button--primary:hover {
+  background: var(--neon-blue);
+  color: #000;
+  box-shadow: 0 0 20px rgba(76, 201, 240, 0.6);
+  border-color: var(--neon-blue);
+}
+
+.button--secondary {
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: #fff;
+}
+
+.button--secondary:hover {
+  border-color: var(--neon-purple);
+  color: var(--neon-purple);
+}
+
+/* Glassmorphism Cards */
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--neon-purple);
+  box-shadow: 0 0 20px rgba(181, 23, 158, 0.3);
+}
+
+.card__header h3 {
+  color: var(--neon-blue);
+  text-shadow: 0 0 5px rgba(76, 201, 240, 0.5);
+}
+
+
+/* Neon Text for Footer */
+.neon-text {
+  color: var(--neon-blue); /* Primary neon blue */
+  text-shadow:
+    0 0 5px var(--neon-blue); /* Reduced glow for clarity */
+}
